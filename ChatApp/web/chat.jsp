@@ -7,10 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>$Title$</title>
-</head>
+<jsp:include page="head.jsp">
+    <jsp:param name="title" value="Chat"/>
+</jsp:include>
 <body>
-$END$
+<jsp:include page="header.jsp">
+    <jsp:param name="title" value="Chat"/>
+</jsp:include>
 </body>
 </html>

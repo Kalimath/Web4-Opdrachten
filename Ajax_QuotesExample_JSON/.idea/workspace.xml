@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="967e1e99-1279-43c8-bc8a-a2bf7f918f1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_annotations_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_core_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jackson_databind_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jstl_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Ajax_QuotesExample_JSON_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Ajax_QuotesExample_JSON_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ChatApp/src/domain/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ajax_QuotesExample_JSON.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ajax_QuotesExample_JSON.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/.idea/artifacts/ChatApp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/.idea/artifacts/ChatApp_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/src/controller/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/controller/LogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/web/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/chat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/header.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569578246754</updated>
       <workItem from="1569578253089" duration="262000" />
-      <workItem from="1569578825023" duration="436000" />
+      <workItem from="1569578825023" duration="1009000" />
     </task>
     <servers />
   </component>

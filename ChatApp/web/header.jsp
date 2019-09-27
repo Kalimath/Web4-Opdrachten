@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <header role="banner">
-<img alt="Books" src="images/books.jpg">
+<img alt="Books" src="images/MB%20chat.jpg">
 <h1><span>Chat App</span></h1>
 <nav>
 <ul>
@@ -11,6 +11,7 @@
 </c:when>
 <c:otherwise>
 <li><a href="Controller">Home</a></li>
+<li  id="actual"><a href="Controller?action=chat">Chat</a></li>
 </c:otherwise>
 </c:choose>
 
