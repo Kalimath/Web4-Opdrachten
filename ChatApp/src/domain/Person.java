@@ -20,7 +20,7 @@ public class Person {
 	private String lastName;
 	private Role role;
 	private String status;
-	private List<Person> friends;
+	private List<String> friends = new ArrayList<>();
 
 	public Person(String userId, String password, String firstName,
 			String lastName,Role role) {
@@ -30,7 +30,7 @@ public class Person {
 		setLastName(lastName);
 		setRole(role);
 		setStatus(null);
-		setFriends(new ArrayList<>());
+
 	}
 
 
@@ -43,34 +43,30 @@ public class Person {
 		setLastName(lastName);
 		setRole(role);
 		setStatus(null);
-		setFriends(new ArrayList<>());
+
 	}
 
 	public Person() {
-		setFriends(new ArrayList<>());
+
 	}
 
-	public List<Person> getFriends() {
+	public List<String> getFriends() {
 		return friends;
 	}
 
-	public void setFriends(List<Person> friends) {
-		this.friends = friends;
-	}
-
-	public void addFriend(Person friend){
-		if(friend!=null){
-			friends.add(friend);
+	public void addFriend(String friendId){
+		if(!friendId.isEmpty()||!friendId.trim().equals("")){
+			friends.add(friendId);
 		}
 	}
 
 	public void deleteFriend(String friendId){
-		if(!friendId.isEmpty()||!friendId.trim().equals(""))
-			for(Person p : friends){
-				if(p.getUserId().toLowerCase().trim().equals(friendId.toLowerCase().trim())){
-					friends.remove(p);
-				}
+		if(!friendId.isEmpty()||!friendId.trim().equals("")){
+			if(friends.contains(friendId)){
+				friends.remove(friendId);
+			}
 		}
+
 	}
 
 	public void setStatus(String s) {

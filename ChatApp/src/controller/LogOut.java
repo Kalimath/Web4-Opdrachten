@@ -1,6 +1,5 @@
 package controller;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,11 +10,10 @@ public class LogOut extends RequestHandler {
 
 	@Override
 	public void handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+								HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		session.invalidate();
-		RequestDispatcher view = request.getRequestDispatcher("index.jsp");
-		view.forward(request,response);
+		request.getRequestDispatcher("index.jsp").forward(request,response);
 	}
 	
 }

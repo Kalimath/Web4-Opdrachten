@@ -1,22 +1,19 @@
-var xhr = new XMLHttpRequest();
+var xhrStatus = new XMLHttpRequest();
 window.onload = getStatus;
 
 function getStatus() {
-    xhr.open("GET", "Controller?action=GetUserFromSession", true);
-    xhr.onreadystatechange = getData;
-    xhr.send(null);
+    xhrStatus.open("GET", "Controller?action=GetUserFromSession", true);
+    alert("getStatus called!!");
+    xhrStatus.onreadystatechange = getStatusData;
+    xhrStatus.send(null);
 }
 
-function getData () {
-    if (xhr.status == 200) {
-        if (xhr.readyState == 4) {
-            // alert(xhr.responseText);
-            let serverResponse = JSON.parse(xhr.responseText);
-            console.log(serverResponse.status); // werkt nog niet probeer in console te checken of de property hieronder juist uitkomt
+function getStatusData () {
+    if (xhrStatus.status == 200) {
+        if (xhrStatus.readyState == 4) {
+            alert(xhrStatus.responseText);
+            let serverResponse = JSON.parse(xhrStatus.responseText);
             let status = serverResponse.status; // status property uit JSON
-
-
-
             let statusDiv = document.getElementById("personStatus");
             let statusParagraph = statusDiv.childNodes[0];
 

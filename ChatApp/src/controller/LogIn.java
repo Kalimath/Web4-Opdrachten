@@ -12,13 +12,12 @@ import javax.servlet.http.HttpSession;
 
 import domain.Person;
 import domain.PersonService;
-import domain.Status;
 
 public class LogIn extends RequestHandler {
 
 	@Override
 	public void handleRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+								HttpServletResponse response) throws ServletException, IOException {
 		String destination = "index.jsp";
 		List<String> errors = new ArrayList<String>();
 		
@@ -49,8 +48,8 @@ public class LogIn extends RequestHandler {
 			destination = "chat.jsp";
 		}
 
-		RequestDispatcher view = request.getRequestDispatcher(destination);
-		view.forward(request,response);
+		request.getRequestDispatcher(destination).forward(request,response);
+
 	}
 	
 	private void createSession(Person person, HttpServletRequest request,

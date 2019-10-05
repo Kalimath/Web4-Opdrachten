@@ -1,46 +1,51 @@
-var xhr = new XMLHttpRequest();
+var xhrFriends = new XMLHttpRequest();
 window.onload = getFriends;
+var friendlist = [];
 
 function getFriends() {
-    xhr.open("GET", "Controller?action=GetUserFromSession", true);
-    xhr.onreadystatechange = getData;
-    xhr.send(null);
+    xhrFriends.open("GET", "Controller?action=GetFriends", true);
+    xhrFriends.onreadystatechange = getFriendsData;
+    xhrFriends.send(null);
 }
 
-function getData () {
-    if (xhr.status == 200) {
-        if (xhr.readyState == 4) {
-            // alert(xhr.responseText);
-            let serverResponse = JSON.parse(xhr.responseText);
-            let friendsList = serverResponse.friends; // friends list uit JSON
-            alert(friendsList);
+function getFriendsData() {
+    if (xhrFriends.readyState == 4) {
+        if (xhrFriends.status == 200) {
+            var serverResponse = JSON.parse(xhrFriends.responseText);
+            var tableroot = document.getElementById("friendsTable");
+            var tbody = tableroot.childNodes[1];
+            console.log(serverResponse.length);
+            for (var i = 0; i < serverResponse.length; i++) {
+                if (friendlist.indexOf(serverResponse[i].userId) < 0) {
+                    var tr = document.createElement('tr');
+                    for (var j = 0; j < 3; j++) {
 
+                        if (i === 10 && j === 1) {
+                            break
+                        } else if (j === 1) {
+                            let td = document.createElement('td');
+                            td.appendChild(document.createTextNode(serverResponse[i].status));
 
-
-            let friendsTable = document.getElementById("friendsTbody");
-            var friendRow = friendsTable.childNodes[0];
-
-            var friendsLength = friendsList.length;
-            for (var i = 0; i < friendsLength; i++) {
-                console.log(friendsList[i]);
-                if (friendRow == null) {
-                    friendRow = document.createElement('tr');
-                    friendRow.id = "friendRow"+i;
-                    let friendCredits = friendRow.createElement('td');
-                    friendCredits = document.createTextNode(friendsList[i]["firstName"]);
-                    friendRow.appendChild(friendCredits);
-                    //friendRow.appendChild(friendCredits);
-                }
-                else {
-                    let friendCredits = document.createTextNode(friendsList[i]["firstName"]);
-                    friendRow.appendChild(friendCredits);
-                    //friendRow.appendChild(friendCredits);
-                    friendsRows.appendChild(friendRow);
+                            tr.appendChild(td);
+                        } else if (j === 0) {
+                            let td = document.createElement('td');
+                            td.appendChild(document.createTextNode(serverResponse[i].userId));
+                            tr.appendChild(td);
+                            friendlist.push(serverResponse[i].userId);
+                        } /*else if (j === 2) {
+                            let td = document.createElement('td');
+                            let str = '<button id="' + serverResponse[i].userId + '" onclick="openChat(\'' + serverResponse[i].userId + '\');">Message</button>'
+                            td.innerHTML = str;
+                            tr.appendChild(td);
+                            friendlist.push(serverResponse[i].userId);
+                        }*/
+                    }
+                    tbody.appendChild(tr);
                 }
             }
 
 
-            setTimeout(getFriends, 2000);
+            setTimeout(getFriends, 5000);
         }
     }
 }

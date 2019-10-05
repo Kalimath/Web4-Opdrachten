@@ -1,3 +1,5 @@
+
+
 package controller;
 
 import java.io.IOException;
@@ -15,42 +17,41 @@ import domain.PersonService;
 
 @WebServlet("/Controller")
 public class Controller extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	
-	private PersonService model = new PersonService();
-	private ControllerFactory controllerFactory = new ControllerFactory();
+    private static final long serialVersionUID = 1L;
 
-	public Controller() {
-		super();
-	}
+    private PersonService model = new PersonService();
+    private ControllerFactory controllerFactory = new ControllerFactory();
 
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		processRequest(request, response);
-	}
+    public Controller() {
+        super();
+    }
 
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		processRequest(request, response);
-	}
+    protected void doGet(HttpServletRequest request,
+                         HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
+    }
 
-	protected void processRequest(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    protected void processRequest(HttpServletRequest request,
+                                  HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         String destination = "index.jsp";
         if (action != null) {
-        	RequestHandler handler;
-        	try {
-        		handler = controllerFactory.getController(action, model);
-				handler.handleRequest(request, response);
-        	} 
-        	catch (NotAuthorizedException exc) {
-        		List<String> errors = new ArrayList<String>();
-        		errors.add(exc.getMessage());
-        		request.setAttribute("errors", errors);
-        		destination="index.jsp";
-        	}
+            RequestHandler handler;
+            try {
+                handler = controllerFactory.getController(action, model);
+                handler.handleRequest(request, response);
+            } catch (NotAuthorizedException exc) {
+                List<String> errors = new ArrayList<String>();
+                errors.add(exc.getMessage());
+                request.setAttribute("errors", errors);
+                destination = "index.jsp";
+            }
         }
-	}
+    }
 
 }

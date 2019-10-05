@@ -17,20 +17,18 @@
 
 <main>
     <div>
-        <h3>status: </h3>
+        <h3>Status: </h3>
         <div id="personStatus"></div>
     </div>
     <div>
         <h3>Friends:</h3>
         <table id="friendsTable">
             <thead>
-            <tr>
-                <th>Name</th>
-                <th>Status</th>
-            </tr>
+            <th>UserId</th>
+            <th>Status</th>
+            <%--                <th>Chat</th>--%>
             </thead>
-            <tbody id="friendsTbody">
-
+            <tbody>
             </tbody>
         </table>
     </div>
@@ -50,6 +48,5 @@
 </jsp:include>
 </body>
 <script type="text/javascript" src="js/changeStatus.js"></script>
-<script type="text/javascript" src="js/getStatus.js"></script>
-<script type="text/javascript" src="js/getFriends.js"></script>
+<script type="text/javascript" src="js/getChatInfo.js"></script>
 </html>
