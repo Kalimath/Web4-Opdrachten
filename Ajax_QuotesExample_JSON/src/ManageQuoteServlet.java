@@ -20,15 +20,15 @@ public class ManageQuoteServlet extends HttpServlet {
 	}   	
 		
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Quote quote = quoteRepository.getRandomQuote();
-		String quoteJSON = this.toJSON(quote);
-		response.setContentType("application/json");
-		response.getWriter().write(quoteJSON);
+		Quote quote = quoteRepository.getRandomQuote(); //geeft willekeurige quote terug
+		String quoteJSON = this.toJSON(quote); //zet quote om in JSON string
+		response.setContentType("application/json"); //vul response header
+		response.getWriter().write(quoteJSON); //commit response
 	}  	
 		
 	public String toJSON (Quote quote) throws JsonProcessingException {
-		ObjectMapper mapper = new ObjectMapper();
-		return mapper.writeValueAsString(quote);
+		ObjectMapper mapper = new ObjectMapper(); //create objectmapper instance
+		return mapper.writeValueAsString(quote); //geeft quote inhoud als JSON string terug
 	}
 		
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -5,6 +5,8 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -17,6 +19,8 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private Role role;
+	private String status;
+	private List<Person> friends;
 
 	public Person(String userId, String password, String firstName,
 			String lastName,Role role) {
@@ -25,7 +29,10 @@ public class Person {
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
+		setStatus(null);
+		setFriends(new ArrayList<>());
 	}
+
 
 	public Person(String userId, String password, String salt,
 			String firstName, String lastName,Role role) {
@@ -35,9 +42,47 @@ public class Person {
 		setFirstName(firstName);
 		setLastName(lastName);
 		setRole(role);
+		setStatus(null);
+		setFriends(new ArrayList<>());
 	}
 
 	public Person() {
+		setFriends(new ArrayList<>());
+	}
+
+	public List<Person> getFriends() {
+		return friends;
+	}
+
+	public void setFriends(List<Person> friends) {
+		this.friends = friends;
+	}
+
+	public void addFriend(Person friend){
+		if(friend!=null){
+			friends.add(friend);
+		}
+	}
+
+	public void deleteFriend(String friendId){
+		if(!friendId.isEmpty()||!friendId.trim().equals(""))
+			for(Person p : friends){
+				if(p.getUserId().toLowerCase().trim().equals(friendId.toLowerCase().trim())){
+					friends.remove(p);
+				}
+		}
+	}
+
+	public void setStatus(String s) {
+		if(s!=null){
+			status = s;
+		}else{
+			status  = "offline";
+		}
+	}
+
+	public String getStatus() {
+		return this.status;
 	}
 
 	public Role getRole() {

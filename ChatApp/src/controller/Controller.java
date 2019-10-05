@@ -42,7 +42,7 @@ public class Controller extends HttpServlet {
         	RequestHandler handler;
         	try {
         		handler = controllerFactory.getController(action, model);
-				destination = handler.handleRequest(request, response);
+				handler.handleRequest(request, response);
         	} 
         	catch (NotAuthorizedException exc) {
         		List<String> errors = new ArrayList<String>();
@@ -51,8 +51,6 @@ public class Controller extends HttpServlet {
         		destination="index.jsp";
         	}
         }
-        RequestDispatcher view = request.getRequestDispatcher(destination);
-        view.forward(request, response);
 	}
 
 }

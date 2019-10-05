@@ -11,6 +11,7 @@ public class ControllerFactory {
 	private RequestHandler createHandler(String handlerName, PersonService model) {
 		RequestHandler handler = null;
 		try {
+			System.out.println(handlerName);
 			Class<?> handlerClass = Class.forName("controller."+ handlerName);
 			Object handlerObject = handlerClass.newInstance();
 			handler = (RequestHandler) handlerObject;

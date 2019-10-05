@@ -10,8 +10,8 @@ function getNewQuote () {
 }
 
 function getData () {
-	if (xHRObject.status == 200) {
-		if (xHRObject.readyState == 4) {
+	if (xHRObject.status == 200) { //als gegevens opgehaald zijn
+		if (xHRObject.readyState == 4) { //als operatie voltooid is
 			alert(xHRObject.responseText);
 			var serverResponse = JSON.parse(xHRObject.responseText);
 			var quote = serverResponse.quote; // of je kan ook doen: serverResponse["quote"]
