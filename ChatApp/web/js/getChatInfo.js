@@ -57,7 +57,7 @@ function getFriendsData() {
 
 function getStatus() {
     xhrStatus.open("GET", "Controller?action=GetUserFromSession", true);
-    alert("getStatus called!!");
+    //alert("getStatus called!!");
     xhrStatus.onreadystatechange = getStatusData;
     xhrStatus.send(null);
 }
@@ -65,7 +65,7 @@ function getStatus() {
 function getStatusData () {
     if (xhrStatus.status == 200) {
         if (xhrStatus.readyState == 4) {
-            alert(xhrStatus.responseText);
+            //alert(xhrStatus.responseText);
             let serverResponse = JSON.parse(xhrStatus.responseText);
             let status = serverResponse.status; // status property uit JSON
             let statusDiv = document.getElementById("personStatus");

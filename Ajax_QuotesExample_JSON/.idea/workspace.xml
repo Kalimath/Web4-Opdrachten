@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="967e1e99-1279-43c8-bc8a-a2bf7f918f1b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ChatApp/src/controller/GetFriends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ChatApp/src/controller/GetStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ChatApp/web/js/getChatInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/GetUserFromSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/GetUserFromSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/LogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/LogIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/controller/LogOut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/db/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/db/PersonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/db/PersonRepositoryStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/db/PersonRepositoryStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/domain/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/domain/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/domain/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/WEB-INF/classes/domain/PersonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/chat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/js/getFriends.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/js/getFriends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/js/getStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/artifacts/ChatApp_war_exploded/js/getStatus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/GetUserFromSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/GetUserFromSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/LogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/LogIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/controller/LogOut.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/db/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/db/PersonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/db/PersonRepositoryStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/db/PersonRepositoryStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/domain/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/domain/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/domain/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/out/production/ChatApp/domain/PersonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/controller/GetUserFromSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/controller/GetUserFromSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/controller/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/controller/LogIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/controller/LogOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/controller/LogOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/controller/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/controller/RequestHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/db/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/db/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/db/PersonRepositoryStub.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/db/PersonRepositoryStub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/domain/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/src/domain/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/src/domain/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/web/chat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/chat.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/web/js/getFriends.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/js/getFriends.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatApp/web/js/getStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/js/getStatus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/web/js/changeStatus.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/js/changeStatus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/web/js/getChatInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatApp/web/js/getChatInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/web/js/getFriends.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatApp/web/js/getStatus.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
