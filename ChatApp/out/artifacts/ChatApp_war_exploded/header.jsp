@@ -7,11 +7,12 @@
 <ul>
 <c:choose>
 <c:when test="${param.title=='Home'}">
-<li  id="actual"><a href="Controller">Home</a></li>
+<li id="actual"><a href="Controller?action=Home">Home</a></li>
+<li><a href="chat.jsp">Chat</a></li>
 </c:when>
 <c:otherwise>
 <li><a href="Controller">Home</a></li>
-<li  id="actual"><a href="Controller?action=chat">Chat</a></li>
+
 </c:otherwise>
 </c:choose>
 

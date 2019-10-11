@@ -11,7 +11,7 @@ function changeStatus () {
     // belangrijk dat dit gezet wordt anders kan de servlet de informatie niet interpreteren!!!
     // protocol header information
     xmlHttpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    alert(information);
+    //alert(information);
     xmlHttpRequest.send(information);
 }
 

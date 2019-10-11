@@ -34,6 +34,15 @@
     </div>
     <div>
         <p>
+            <label for="newFriend">Add friend</label>
+            <input type="text" id="newFriend" name="newFriend" value="bib@ucll.be">
+        </p>
+        <p>
+            <input type="submit" id="addFriendbutton" value="add">
+        </p>
+    </div>
+    <div>
+        <p>
             <label for="newStatus">Change status</label>
             <input type="text" id="newStatus" name="newStatus" placeholder="type a new status">
         </p>
@@ -49,4 +58,5 @@
 </body>
 <script type="text/javascript" src="js/changeStatus.js"></script>
 <script type="text/javascript" src="js/getChatInfo.js"></script>
+<script type="text/javascript" src="js/addFriend.js"></script>
 </html>

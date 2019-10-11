@@ -1,6 +1,7 @@
 var xhrFriends = new XMLHttpRequest();
 var xhrStatus = new XMLHttpRequest();
-var friendlist = [];
+
+
 
 window.onload = function () {
     getFriends();
@@ -14,11 +15,13 @@ function getFriends() {
 }
 
 function getFriendsData() {
-    if (xhrFriends.readyState == 4) {
-        if (xhrFriends.status == 200) {
+    var friendlist = [];
+    if (xhrFriends.status == 200) {
+        if (xhrFriends.readyState == 4) {
             var serverResponse = JSON.parse(xhrFriends.responseText);
             var tableroot = document.getElementById("friendsTable");
-            var tbody = tableroot.childNodes[1];
+            var tbody = tableroot.lastElementChild;
+            tbody.innerHTML = "";
             console.log(serverResponse.length);
             for (var i = 0; i < serverResponse.length; i++) {
                 if (friendlist.indexOf(serverResponse[i].userId) < 0) {
@@ -29,6 +32,7 @@ function getFriendsData() {
                             break
                         } else if (j === 1) {
                             let td = document.createElement('td');
+
                             td.appendChild(document.createTextNode(serverResponse[i].status));
 
                             tr.appendChild(td);
@@ -36,7 +40,7 @@ function getFriendsData() {
                             let td = document.createElement('td');
                             td.appendChild(document.createTextNode(serverResponse[i].userId));
                             tr.appendChild(td);
-                            friendlist.push(serverResponse[i].userId);
+                            //friendlist.push(serverResponse[i].userId);
                         } /*else if (j === 2) {
                             let td = document.createElement('td');
                             let str = '<button id="' + serverResponse[i].userId + '" onclick="openChat(\'' + serverResponse[i].userId + '\');">Message</button>'
@@ -50,7 +54,7 @@ function getFriendsData() {
             }
 
 
-            setTimeout(getFriends, 5000);
+            setTimeout(getFriends, 10000);
         }
     }
 }

@@ -49,8 +49,10 @@ public class Controller extends HttpServlet {
                 List<String> errors = new ArrayList<String>();
                 errors.add(exc.getMessage());
                 request.setAttribute("errors", errors);
-                destination = "index.jsp";
+                request.getRequestDispatcher(destination).forward(request,response);
             }
+        }else{
+            request.getRequestDispatcher(destination).forward(request,response);
         }
     }
 
