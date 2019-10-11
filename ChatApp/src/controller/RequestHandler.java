@@ -6,15 +6,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import domain.PersonService;
-import domain.Person;
-import domain.Role;
+import domain.*;
 
 import java.io.IOException;
 
 public abstract class RequestHandler {
 
 	private PersonService personService;
+	private MessageService messageService;
 
 	public abstract void handleRequest (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
 
@@ -34,4 +33,11 @@ public abstract class RequestHandler {
 		return false;
 	}
 
+    public void setMessageService(MessageService messageService) {
+		this.messageService = messageService;
+    }
+
+	public MessageService getMessageService() {
+		return messageService;
+	}
 }

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import domain.MessageService;
 import domain.PersonService;
 
 @WebServlet("/Controller")
@@ -20,6 +21,7 @@ public class Controller extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private PersonService model = new PersonService();
+    private MessageService messageService = new MessageService();
     private ControllerFactory controllerFactory = new ControllerFactory();
 
     public Controller() {
