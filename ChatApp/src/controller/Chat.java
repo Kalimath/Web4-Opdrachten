@@ -19,7 +19,7 @@ public class Chat extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
         messages = this.getMessageService();
-        
+
         Person user = (Person) request.getSession().getAttribute("user");
         if (user != null && request.getParameter("chat") != null) {
             response.setContentType("application/json");
